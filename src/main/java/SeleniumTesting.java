@@ -21,12 +21,13 @@ public class SeleniumTesting {
 
         // Initialize the ChromeDriver instance
         driver = new ChromeDriver();
+        // Navigate to the SauceDemo website
+        driver.get("https://www.saucedemo.com/");
     }
 
     @Test
     public void sauceDemoTest() {
-        // Navigate to the SauceDemo website
-        driver.get("https://www.saucedemo.com/");
+
 
         // Find input elements of username, password and login button
         WebElement username_input = driver.findElement(By.id("user-name"));
@@ -44,9 +45,10 @@ public class SeleniumTesting {
 
         // Element that shows up when the error comes out
         WebElement error = driver.findElement(By.xpath("//*[@id=\"login_button_container\"]/div/form/div[3]/h3"));
-
+        String error_text = error.getText();
         // Assert that error message is displayed to user
         Assert.assertTrue(error.isDisplayed());
+        Assert.assertEquals(error_text,"Epic sadface: Username and password do not match any user in this service");
 
     }
 
