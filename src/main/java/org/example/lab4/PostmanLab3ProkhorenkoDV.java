@@ -1,4 +1,4 @@
-package org.example.lab3;
+package org.example.lab4;
 
 import io.restassured.RestAssured;
 import io.restassured.builder.RequestSpecBuilder;
@@ -7,7 +7,6 @@ import io.restassured.http.ContentType;
 import io.restassured.parsing.Parser;
 import io.restassured.response.Response;
 import org.apache.http.HttpStatus;
-import org.apache.tools.ant.taskdefs.condition.Http;
 import org.testng.annotations.Test;
 import org.testng.annotations.BeforeClass;
 
